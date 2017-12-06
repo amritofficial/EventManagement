@@ -10,7 +10,8 @@
             <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
             <div class="navbar-header">
                 <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a id="logo" href="index.html" class="navbar-brand"><span class="logo-text"> RBC Inc.</span></a></div>
+              <!-- <a href="" id="logo" class="navbar-brand"><img src="images/avatar/48.jpg" alt="" style="background-color: white" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Royal Steven</span></a> -->
+                <a id="logo" href="index.html" class="navbar-brand"><img src="../assets/GitHub-Mark.png" alt="" width="30px" height="30px" class="img-responsive img-circle"/><span class="logo-text"> RBC Inc.</span></a></div>
             <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"></a>
                 
                 <ul class="nav navbar navbar-top-links navbar-right mbn">
@@ -98,12 +99,12 @@
                     <div class="clearfix">
                     </div>
                     <form id="topbar-search"  action="" method="" class="hidden-sm hidden-xs">
-                        <div class="input-icon right text-white"  ><i class="fa fa-search"></i><input type="text" style="background-color: rgb(245, 245, 245);" placeholder="Search here..." class="form-control text-white"/></div>
+                        <div class="input-icon right text-white"  ><i class="fa fa-search"></i><input type="text" style="background-color: rgb(247, 247, 247);" #searchInput (keyup.enter)="getSearchString(searchInput.value)"  placeholder="Search here..." class="form-control text-white"/></div>
                     </form>
                 </div>
                 <!-- GETTING DATA FROM CONTENT COMPONENT -->
                 <div class="page-content">
-                    <app-content></app-content>
+                    <app-content [searchThis]='searchString'></app-content>
                 </div>
                
                 <div id="footer">
