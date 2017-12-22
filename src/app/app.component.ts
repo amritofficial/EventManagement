@@ -20,10 +20,10 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     console.log('THE APP JUST RAN!');
-    this.MapService.getData().subscribe(data => {
-      this.result = data.results,
-      console.log(":::: " + this.result[0].geometry.location.lat);
-    });
+    // this.MapService.getData().subscribe(data => {
+    //   this.result = data.results,
+    //   console.log(":::: " + this.result[0].geometry.location.lat);
+    // });
 
 
     this.MapService.getTestData().subscribe(data => {

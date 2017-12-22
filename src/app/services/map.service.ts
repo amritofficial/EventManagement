@@ -18,11 +18,11 @@ export class MapService implements OnInit{
         return this.http.get('../assets/test.json').map(res => res.json());
     }
 
-    getData() {
-        return this.http.get(this.API_URL).map(res => res.json());
-    }
+    // getData() {
+    //     return this.http.get(this.API_URL).map(res => res.json());
+    // }
 
     getPlaces() {
-        return this.http.get(this.API_URL).map((res:any) => res.json());
+        return this.http.get("http://localhost:8080/api/users").map((res:any) => res.json());
     }
 }
