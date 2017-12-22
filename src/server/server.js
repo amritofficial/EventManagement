@@ -3,12 +3,15 @@ var express = require('express');
 var route = require('./routes');
 var bodyParser = require('body-parser');
 var app = express();
+var cors = require('cors');
 
 app.get('/', (req, res) => {
     res.send('It works');
 });
 
 app.use('/api', route);
+
+app.use(cors());
 
 app.use(bodyParser.json());
 

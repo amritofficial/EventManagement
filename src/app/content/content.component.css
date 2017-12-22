@@ -4,3 +4,6 @@
     box-shadow: none !important;
 }
 
+agm-map {
+    height: 300px;
+  }

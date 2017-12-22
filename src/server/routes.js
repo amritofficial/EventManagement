@@ -8,9 +8,12 @@ router.get('/users', (req, res) => {
     res.send({Sucess: 'Test Run Successful!'});
 });
 
+//Types - https://developers.google.com/places/web-service/supported_types
+
 router.get('/getPlaces/:type/:keyword', (request, response) => {
     var type = request.params.type;
     var keyword = request.params.keyword;
+
     response.setHeader('Content-Type', 'application/json');
     var myUrl = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.64111,-79.378664&radius=500&type=' + type + '&keyword='+keyword+'&key=AIzaSyDyhzJk9x2HV0kkWvRvP_zcmuxah7R1wE4';
     let data = '';
