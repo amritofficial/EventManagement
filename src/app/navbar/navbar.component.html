@@ -11,7 +11,8 @@
             <div class="navbar-header">
                 <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
               <!-- <a href="" id="logo" class="navbar-brand"><img src="images/avatar/48.jpg" alt="" style="background-color: white" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Royal Steven</span></a> -->
-                <a id="logo" href="index.html" class="navbar-brand"><img src="../assets/GitHub-Mark.png" alt="" width="30px" height="30px" class="img-responsive img-circle"/><span class="logo-text"> RBC Inc.</span></a></div>
+                <a id="logo" href="index.html" class="navbar-brand"><img src="../assets/GitHub-Mark.png" alt="" width="30px" height="30px" class="img-responsive img-circle"/><span class="logo-text"> RBC Inc.</span></a>
+            </div>
             <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"></a>
                 
                 <ul class="nav navbar navbar-top-links navbar-right mbn">
@@ -21,7 +22,7 @@
                     </li>
                     <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-tasks fa-fw"></i></a>
                     </li>
-                    <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" style="background-color: white" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Royal Steven</span>&nbsp;<span class="caret"></span></a>
+                    <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="" alt="" style="background-color: white" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Royal Steven</span>&nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-user pull-right">
                             <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
                             <li><a href="#"><i class="fa fa-calendar"></i>My Calendar</a></li>
@@ -83,7 +84,7 @@
             </div>
         </nav>
             
-            <div id="page-wrapper">
+            <div id="page-wrapper" onSubmit="return false">
                 <!--BEGIN TITLE & BREADCRUMB PAGE-->
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
@@ -98,8 +99,8 @@
                     </ol>
                     <div class="clearfix">
                     </div>
-                    <form id="topbar-search"  action="" method="" class="hidden-sm hidden-xs">
-                        <div class="input-icon right text-white"  ><i class="fa fa-search"></i><input type="text" style="background-color: rgb(247, 247, 247);" #searchInput (keyup.enter)="getSearchString(searchInput.value)"  placeholder="Search here..." class="form-control text-white"/></div>
+                    <form class="form-group">
+                        <div class="input-icon right text-white" ><i class="fa fa-search"></i><input type="text" style="background-color: rgb(247, 247, 247);" #searchInput (keyup.enter)="getSearchString(searchInput.value)"  placeholder="Search here..." class="form-control text-white"/></div>
                     </form>
                 </div>
                 <!-- GETTING DATA FROM CONTENT COMPONENT -->
