@@ -17,10 +17,10 @@
               [longitude]="m.lng"
               >
               <!-- [iconUrl]="m.icon" -->  
-              <agm-info-window [maxWidth]="120" #infoWindow>
-                <p>{{ m.vicinity }}</p> <br>
+              <agm-info-window [maxWidth]="140" #infoWindow>
+                <p><img class="img-circle avatar" src="{{ m.icon }}" height="30px" width="30px" alt=""> {{ m.vicinity }}</p>
                 <hr>
-                <p>{{ m.name }}</p>
+                <p>{{ m.name }}</p>                
                 <strong></strong>
               </agm-info-window>
             </agm-marker>
