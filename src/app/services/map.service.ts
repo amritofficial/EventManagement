@@ -23,6 +23,6 @@ export class MapService implements OnInit{
     // }
 
     getPlaces() {
-        return this.http.get("http://localhost:8080/api/users").map((res:any) => res.json());
+        return this.http.get(this.API_URL).map((res:any) => res.json());
     }
 }

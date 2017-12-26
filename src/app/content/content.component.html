@@ -1,14 +1,31 @@
 <div class="container">
   <div class="row" style="display: inline">
     <div class="col-xs-8">
-      <div *ngIf='searchThis' class="panel">
+        <!-- *ngIf='searchThis' -->
+      <div  class="panel">
         <div  class="panel-heading">
           <h2>Results for {{ searchThis }}</h2>
         </div>
         <div class="panel-body">
-          <agm-map [latitude]="lat" [longitude]="lng">
-            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          <agm-map 
+            [latitude]="lat" 
+            [longitude]="lng"
+            [zoom]=12>
+            <agm-marker *ngFor="let m of markers; let i=index"
+              (markerClick)="clickedMarker(m, infoWindow, i)" 
+              [latitude]="m.lat" 
+              [longitude]="m.lng"
+              >
+              <!-- [iconUrl]="m.icon" -->  
+              <agm-info-window [maxWidth]="120" #infoWindow>
+                <p>{{ m.vicinity }}</p> <br>
+                <hr>
+                <p>{{ m.name }}</p>
+                <strong></strong>
+              </agm-info-window>
+            </agm-marker>
           </agm-map>
+
         </div>
       </div>
     </div>
@@ -18,12 +35,6 @@
           <p>Content For test two</p>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-4" *ngFor="let map of mapData">
-      <h1>MAP: {{ map.geometry.location.lat }} </h1><br>
-      <h2>longitude: {{ map.name }}</h2>
     </div>
   </div>
 </div>

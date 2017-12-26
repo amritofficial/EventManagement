@@ -4,10 +4,10 @@ var route = require('./routes');
 var bodyParser = require('body-parser');
 var app = express();
 var cors = require('cors');
+app.use(cors());
 
 app.use('/api', route);
 
-app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -28,26 +28,22 @@ const PORT = 3000;
 //     console.log('Server is running on port' + port);
 // });
 
-// var server = app.listen(process.env.PORT || '8080', function() {
-//     console.log('App listening on port %s', server.address());
-// });
+var server = app.listen(process.env.PORT || '8080', function() {
+    console.log('App listening on port %s', server.address());
+});
 
 
 // Acheiving cors with Node HTTP Server
-var server;
-server = http.createServer(function(req,res){
-	// Set CORS headers
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Request-Method', '*');
-	res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
-	res.setHeader('Access-Control-Allow-Headers', '*');
-	if ( req.method === 'OPTIONS' ) {
-		res.writeHead(200);
-		res.end();
-		return;
-	}
-});
-
-server.listen(8080, () => {
-    console.log("server just ran on 8080");
-});
+// var server;
+// server = http.createServer(function(req,res){
+// 	// Set CORS headers
+// 	res.setHeader('Access-Control-Allow-Origin', '*');
+// 	res.setHeader('Access-Control-Request-Method', '*');
+// 	res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+// 	res.setHeader('Access-Control-Allow-Headers', '*');
+// 	if ( req.method === 'OPTIONS' ) {
+// 		res.writeHead(200);
+// 		res.end();
+// 		return;
+// 	}
+// });
